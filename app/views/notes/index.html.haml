@@ -1,0 +1,22 @@
+
+%h2 Formtastic Form
+=semantic_form_for @search do |f|
+  -f.inputs do
+    =f.input :title_contains
+  -f.buttons do
+    =f.submit "Search"
+
+%h2 rails form helper
+= form_for @search do |f|
+  =f.label :title_contains
+  =f.text_field :title_contains
+  .button= f.submit "Search"
+
+%h2 Results
+%ul
+  - @notes.each do |note|
+    %li
+      =link_to note.title, note_path(note)
+      =link_to 'destroy note', note, confirm: 'Are you sure?', :method => :delete
+
+=link_to 'New Note', new_note_path
