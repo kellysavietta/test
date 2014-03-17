@@ -105,6 +105,7 @@ group :development do
   gem 'pry-rails', "~> 0.3.2"
   gem 'better_errors', "~> 1.1.0"
   gem 'binding_of_caller', "~> 0.7.2"
+  gem 'decoder', "~> 0.9.0"
 end
 
 group :test do

@@ -1,9 +1,11 @@
 
 class NotesController < ApplicationController
 
-	def index
+  def index
     @search = Note.search(params[:search])
+    binding.pry
     @notes = @search.all
+    @title = view_context.title_helper("dogs are awesome")
   end
 
   def new

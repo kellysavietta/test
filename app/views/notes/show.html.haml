@@ -2,4 +2,14 @@
 
 =@note.body
 
+
+%p== Please navigate to the following web address #{link_to "http://jobs.3playmedia.com", "http://jobs.3playmedia.com"} and login to your account using the below information. Again, be sure you are using Google Chrome or Safari. If you simply click on the above link your computer may open your default web browser, such as Internet Explorer or Mozilla Firefox.
+%p== Login: <b>#{@note.title}</b><br>Password: <b>password</b>
+
+%p== Please navigate to the following web address to create a password and access your account!
+%p== Login: <b>#{@note.title}</b>
+  
+%p== #{link_to notes_url, notes_url}
+
+
 =link_to "Back", notes_path

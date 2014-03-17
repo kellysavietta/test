@@ -3,6 +3,7 @@
 =semantic_form_for @search do |f|
   -f.inputs do
     =f.input :title_contains
+    =f.input :created_at_less_than
   -f.buttons do
     =f.submit "Search"
 
@@ -12,7 +13,7 @@
   =f.text_field :title_contains
   .button= f.submit "Search"
 
-%h2 Results
+%h2== Results - #{@title}
 %ul
   - @notes.each do |note|
     %li
@@ -20,3 +21,4 @@
       =link_to 'destroy note', note, confirm: 'Are you sure?', :method => :delete
 
 =link_to 'New Note', new_note_path
+
